@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://wgparch.github.io/fht/</loc>
+         <loc>https://wgparch.codeberg.page/fht/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://wgparch.github.io/fht/credits/</loc>
+         <loc>https://wgparch.codeberg.page/fht/credits/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://wgparch.github.io/fht/gallery/</loc>
+         <loc>https://wgparch.codeberg.page/fht/gallery/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://wgparch.github.io/fht/installation/</loc>
+         <loc>https://wgparch.codeberg.page/fht/installation/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://wgparch.github.io/fht/keybinds/</loc>
+         <loc>https://wgparch.codeberg.page/fht/keybinds/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://wgparch.github.io/fht/theming/</loc>
+         <loc>https://wgparch.codeberg.page/fht/theming/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
     <url>
-         <loc>https://wgparch.github.io/fht/waybar/</loc>
+         <loc>https://wgparch.codeberg.page/fht/waybar/</loc>
          <lastmod>2026-08-23</lastmod>
     </url>
 </urlset>
