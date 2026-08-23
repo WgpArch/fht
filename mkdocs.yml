@@ -1,0 +1,18 @@
+site_name: WgpArch fht-compositor Config
+site_url: https://wgparch.codeberg.page/fht/
+theme:
+  name: material
+  palette:
+    primary: red
+    accent: red
+  features:
+    - navigation.tabs
+    - navigation.expand
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Keybinds: keybinds.md
+  - Waybar & Scripts: waybar.md
+  - Look & Feel: theming.md
+  - Credits: credits.md
+  - Gallery: gallery.md

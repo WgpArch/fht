@@ -1,0 +1,90 @@
+/* Crimson Rain Theme for Rofi */
+
+* {
+    background: rgba ( 10, 10, 12, 85% );
+    background-color: transparent;
+    foreground: rgba ( 208, 208, 208, 100% );
+    bordercolor: rgba ( 43, 43, 43, 100% );
+
+    selected-normal-background: rgba ( 211, 47, 47, 100% );
+    selected-normal-foreground: rgba ( 10, 10, 12, 100% );
+
+    normal-background: rgba ( 0, 0, 0, 0% );
+    normal-foreground: @foreground;
+
+    urgent-foreground: rgba ( 255, 82, 82, 100% );
+    active-foreground: rgba ( 211, 47, 47, 100% );
+
+    separatorcolor: @bordercolor;
+}
+
+window {
+    width: 650px;
+    background-color: transparent;
+    background-image: url("/home/wgparch/.config/fht/walls/Rain_resized.jpg");
+    border: 3px;
+    border-color: @bordercolor;
+    border-radius: 15px;
+    padding: 15px;
+    spacing: 10px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    spacing: 10px;
+    padding: 5px;
+    border: 0px 0px 1px;
+    border-color: @separatorcolor;
+}
+
+prompt {
+    text-color: @foreground;
+    font: "Z003 16 bold";
+}
+
+entry {
+    text-color: @foreground;
+    font: "Z003 14";
+}
+
+listview {
+    lines: 12;
+    spacing: 5px;
+    padding: 5px;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    font: "Z003 14";
+}
+
+element-icon {
+    size: 24px;
+    margin: 0px 10px 0px 0px;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+    border: 1px;
+    border-color: @bordercolor;
+    font: "Z003 14 bold";
+}
+
+element alternate.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}

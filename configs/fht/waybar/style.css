@@ -1,0 +1,163 @@
+/* ================= CRIMSON RAIN PALETTE ================= */
+@define-color ruby      #D32F2F;   /* Vibrant crimson red (Active/Accent) */
+@define-color ruby-dark #5C1010;   /* Dark crimson (For gradients) */
+@define-color text      #D0D0D0;   /* Clean light gray (Text/Icons) */
+@define-color hover     #FF5252;   /* Bright red/pink (Hover states) */
+@define-color border    #2B2B2B;   /* Dark charcoal (Borders/Inactive) */
+
+/* This is the sheer background. Change 0.85 to 0.95 for more solid, or 0.50 for more transparent */
+@define-color sheer-bg  rgba(10, 10, 12, 0.85); 
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'Z003', 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+window#waybar.hidden { opacity: 0.2; }
+
+tooltip {
+    background: rgba(10, 10, 12, 0.95);
+    border: 1px solid @ruby;
+    border-radius: 12px;
+}
+tooltip label { color: @text; }
+
+/* ============ LEFT: launcher gem ============ */
+#custom-launcher {
+    background-image: linear-gradient(135deg, @ruby 0%, @ruby-dark 100%);
+    color: @text;
+    border: 1px solid @border;
+    border-radius: 17px;
+    padding: 0 12px;
+    margin: 0 4px 0 6px;
+    font-size: 16px;
+}
+#custom-launcher:hover {
+    background-image: linear-gradient(135deg, @hover 0%, @ruby-dark 100%);
+}
+
+/* ============ workspaces: numbered sheer circles ============ */
+#workspaces {
+    background: @sheer-bg;
+    border: 1px solid @border;
+    border-radius: 17px;
+    padding: 0 5px;
+    margin: 0 4px;
+}
+#workspaces button {
+    background: transparent;
+    color: @text;
+    border-radius: 14px;
+    padding: 2px 9px;
+    margin: 2px 1px;
+}
+#workspaces button:hover {
+    background: rgba(255, 82, 82, 0.25);
+    color: @hover;
+}
+#workspaces button.active {
+    background: @ruby;
+    color: #0A0A0C;
+    font-weight: bold;
+}
+#workspaces button.urgent {
+    background: @hover;
+    color: #0A0A0C;
+}
+
+/* ============ taskbar + tray ============ */
+#taskbar {
+    background: @sheer-bg;
+    border: 1px solid @border;
+    border-radius: 17px;
+    padding: 0 6px;
+    margin: 0 4px;
+}
+#taskbar button {
+    padding: 0 5px;
+    color: @text;
+    border-radius: 12px;
+}
+#taskbar button:hover  { background: rgba(211, 47, 47, 0.35); }
+#taskbar button.active { background: @ruby; color: @text; }
+
+#tray {
+    background: @sheer-bg;
+    border: 1px solid @border;
+    border-radius: 17px;
+    padding: 0 10px;
+    margin: 0 4px;
+}
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention { -gtk-icon-effect: highlight; }
+
+/* ============ CENTER: clock + weather pill ============ */
+#clock, #custom-weather {
+    background: @sheer-bg;
+    border-top: 1px solid @border;
+    border-bottom: 1px solid @border;
+    padding: 0 12px;
+    color: @text;
+}
+#clock          { border-left: 1px solid @border;  border-radius: 17px 0 0 17px; }
+#custom-weather { border-right: 1px solid @border; border-radius: 0 17px 17px 0; margin-right: 4px; }
+
+/* ============ RIGHT: player gem pill ============ */
+#custom-player {
+    background-image: linear-gradient(90deg, @ruby-dark 0%, @ruby 70%, #d96a80 100%);
+    color: @text;
+    border-radius: 17px;
+    padding: 0 14px;
+    margin: 0 4px;
+}
+
+/* ============ RIGHT: sheer status cluster ============ */
+#memory, #cpu, #temperature, #battery,
+#custom-notification, #pulseaudio, #disk {
+    background: @sheer-bg;
+    border-top: 1px solid @border;
+    border-bottom: 1px solid @border;
+    padding: 0 10px;
+    color: @text;
+}
+#memory { border-left: 1px solid @border;  border-radius: 17px 0 0 17px; }
+#disk   { border-right: 1px solid @border; border-radius: 0 17px 17px 0; margin-right: 4px; }
+
+#cpu:hover, #memory:hover, #disk:hover { background: rgba(211, 47, 47, 0.25); }
+
+#temperature.critical { color: #ff5570; }
+
+#battery.charging, #battery.plugged { color: @hover; }
+@keyframes blink { to { background: @text; color: @ruby-dark; } }
+#battery.critical:not(.charging) {
+    background: @ruby;
+    color: @text;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio.muted { color: #ff5570; }
+
+/* ============ RIGHT: power gem ============ */
+#custom-power {
+    background-image: linear-gradient(135deg, @ruby 0%, @ruby-dark 100%);
+    color: @text;
+    border: 1px solid @border;
+    border-radius: 17px;
+    padding: 0 12px;
+    margin: 0 6px 0 4px;
+    font-size: 16px;
+}
+#custom-power:hover {
+    background-image: linear-gradient(135deg, @hover 0%, @ruby-dark 100%);
+}
