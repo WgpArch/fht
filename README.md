@@ -14,7 +14,7 @@ Smithay-based dynamic tiling Wayland compositor riced with the **Crimson Rain** 
 
 ## 📖 Documentation & Installation
 
-For full instructions, the manual cargo build process, keybinds, and the complete technical guide, please visit the **[Official Documentation Website](https://wgparch.codeberg.page/fht/)**.
+For full instructions, the manual cargo build process, keybinds, and the complete technical guide, please visit the **[Official Documentation Website](https://wgparch.github.io/fht/)**.
 
 Quick setup:
 

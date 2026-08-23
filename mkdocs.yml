@@ -1,5 +1,5 @@
 site_name: WgpArch fht-compositor Config
-site_url: https://wgparch.codeberg.page/fht/
+site_url: https://wgparch.github.io/fht/
 theme:
   name: material
   palette:
