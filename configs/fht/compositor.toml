@@ -13,11 +13,17 @@
 # whatever you need to service files instead! This will provide many niceties like
 # logging and restart-on-failure
 autostart = [
-"sleep 2 && swaync",
+"systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP",
+"systemctl --user reset-failed xdg-desktop-portal-gtk.service",
+"systemctl --user restart xdg-desktop-portal",
+"wl-paste --type text --watch cliphist store", 
+"wl-paste --type image --watch cliphist store",
+"swaync",
 "nm-applet --indicator",
 "xwayland-satellite :1",
 "swaybg -i ~/.config/fht/walls/Rain.jpg -m fill",
 "waybar -c ~/.config/fht/waybar/config.jsonc -s ~/.config/fht/waybar/style.css",
+
 ]
 
 # ---------------------------------------------------------
@@ -25,6 +31,7 @@ autostart = [
 # SEE: https://nferhat.github.io/fht-compositor/configuration/introduction.html#env
 [env]
 DISPLAY = ":1"
+XDG_CURRENT_DESKTOP = "fht-comp" 
 
 # ---------------------------------------------------------
 
