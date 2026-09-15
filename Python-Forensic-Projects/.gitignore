@@ -1,0 +1,16 @@
+# Ignore massive recovered data folders
+recovered/
+sorted_recovery/
+deep_salvaged_text/
+salvaged_text/
+_fixed/
+
+# Ignore disk images and test drives
+*.dd
+*.img
+*.E01
+*.bin
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
